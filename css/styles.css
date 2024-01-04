@@ -1,25 +1,35 @@
 @font-face {
-    font-family: Kalam-Bold;
-    src: url(../fonts/Kalam/Kalam-Bold.ttf);
+    font-family: Orbitron-Bold;
+    src: url(../fonts/Orbitron/Orbitron-Bold.ttf);
 }
 
 @font-face {
-    font-family: Kalam-Regular;
-    src: url(../fonts/Kalam/Kalam-Regular.ttf);
+    font-family: Orbitron-Regular;
+    src: url(../fonts/Orbitron/Orbitron-Regular.ttf);
 }
 
 body {
-    font-family: Kalam-Regular;
+    font-family: Orbitron-Regular;
+    letter-spacing: 2px;
+    color: rgb(241, 247, 252);
+    font-size: 14px;
+    background-color: #3a2a67;
+    background-image: url(../images/rocket.png), url(../images/sky1.jpg);
+    background-position: right bottom, left top;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 400px, 100% 100%;
+    background-attachment: fixed;
 }
 
 .header {
     padding: 10px;
     text-align: center;
-    font-family: Kalam-Bold;
+    font-family: Orbitron-Bold;
 }
 
 h1 {
-    font-size: 50px;
+    font-size: 72px;
+    letter-spacing: 4px;
     background-image: linear-gradient(45deg, #553c9a, #ee4b2b);
     color: transparent;
     background-clip: text;
@@ -28,11 +38,28 @@ h1 {
 }
 
 h2 {
-    font-size: 30px;
+    font-size: 28px;
 }
 
-.form-section {
-    width: 50%;
+h3 {
+    font-size: 24px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid white;
+}
+
+.form-container {
+    width: 64%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 8px 24px;
+    background-color: rgba(53, 94, 155, 0.5);
+    border-radius: 12px;
+}
+
+.top-label {
+    font-size: 18px;
+    display: inline-block;
+    padding: 8px 0px;
 }
 
 input[type=text], input[type=email], input[type=tel], input[type=number], input[type=date], input[type=color], input[type=range] {
@@ -42,6 +69,16 @@ input[type=text], input[type=email], input[type=tel], input[type=number], input[
     margin: 8px 0px;
     box-sizing: border-box;
     border-radius: 10px;
+    outline: none;
+}
+
+input[type=text]:hover, input[type=email]:hover, input[type=tel]:hover, input[type=number]:hover, input[type=date]:hover, input[type=color]:hover {
+    box-shadow: 12px 12px 16px 0 rgb(236, 234, 234);
+}
+
+input[type=text]:focus, input[type=email]:focus, input[type=tel]:focus, input[type=number]:focus, input[type=date]:focus, input[type=color]:focus {
+    border: 2px solid rgb(177, 64, 128);
+    box-shadow: 12px 12px 16px 0 rgb(236, 234, 234);
 }
 
 .inputsection {
@@ -60,6 +97,16 @@ input[type=text], input[type=email], input[type=tel], input[type=number], input[
     margin: 8px 0px;
     box-sizing: border-box;
     border-radius: 10px;
+    outline: none;
+}
+
+.menu:hover {
+    box-shadow: 12px 12px 16px 0 rgb(236, 234, 234);
+}
+
+.menu:focus {
+    border: 2px solid rgb(177, 64, 128);
+    box-shadow: 12px 12px 16px 0 rgb(236, 234, 234);
 }
 
 textarea {
@@ -69,12 +116,107 @@ textarea {
     box-sizing: border-box;
     border-radius: 10px;
     resize: none;
+    outline: none;
 }
 
-canvas {
+textarea:hover {
+    box-shadow: 12px 12px 16px 0 rgb(236, 234, 234);
+}
+
+textarea:focus {
+    border: 2px solid rgb(177, 64, 128);
+    box-shadow: 12px 12px 16px 0 rgb(236, 234, 234);
+}
+
+#signature-pad {
     width: 100%;
     box-sizing: border-box;
+    border: 2px dashed rgb(177, 64, 128);
     border-radius: 10px;
-    border:1px solid #000000;
+    background-color: white;
     cursor: crosshair;
+}
+
+.btn {
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    margin: 4px 12px 4px 0px;
+    padding: 16px 16px;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: Orbitron-Regular;
+    font-size: 16px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.btn:hover {
+    box-shadow: 12px 12px 16px 0 rgb(236, 234, 234);
+    background-color: #58cba1;
+}
+
+.btn-neutral {
+    background-color: #de357e;
+    border: none;
+    color: white;
+    margin: 4px 12px 4px 0px;
+    padding: 16px 16px;
+    border-radius: 8px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    font-family: Orbitron-Regular;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.btn-neutral:hover {
+    box-shadow: 12px 12px 16px 0 rgb(236, 234, 234);
+    background-color: #d86497;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.passport-upload {
+    background-color: #7c34bf;
+    border: none;
+    color: white;
+    padding: 16px 16px;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: Orbitron-Regular;
+    font-size: 16px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.passport-upload:hover {
+    box-shadow: 12px 12px 16px 0 rgb(236, 234, 234);
+    background-color: #8459ac;
+}
+
+a:link {
+    color: green;
+}
+
+a:visited {
+    color: white;
+}
+
+a:hover {
+    color: hotpink;
+  }
+
+a:active {
+    color: rgb(183, 183, 246);
 }

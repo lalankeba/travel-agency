@@ -5,34 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CosmicVoyages - Intergalactic Travel Agency</title>
     <link rel="stylesheet" href="css/styles.css">
-    <script src="js/script.js"></script>
 </head>
 <body>
     <div class="header">
         <h1>CosmicVoyages</h1>
         <h2>Embark on Extraordinary Adventures Beyond the Stars</h2>
     </div>
-    <div class="form-section">
-        <form action="" class="info-form">
+    <div class="form-container">
+        <form action="">
             <div>
                 <h3>Personal Information</h3>
-                <label for="full-name">Full Name</label>
+                <label for="full-name" class="top-label">Full Name</label>
                 <input type="text" id="full-name" placeholder="Your full name" minlength="2" maxlength="32" required>
-                <label for="email">Email</label>
+                <label for="email" class="top-label">Email</label>
                 <input type="email" id="email" placeholder="Your email address">
-                <label for="contact">Emergency Contact</label>
+                <label for="contact" class="top-label">Emergency Contact</label>
                 <input type="tel" id="contact" placeholder="Your contact" pattern="[0-9]{1,3}-[0-9]{2}-[0-9]{3}-[0-9]{4}">
-                <label for="age">Age</label>
+                <label for="age" class="top-label">Age</label>
                 <input type="number" id="age" placeholder="Your age" min="1" max="120">
-                <label for="birthdate">Birthdate</label>
+                <label for="birthdate" class="top-label">Birthdate</label>
                 <input type="date" id="birthdate" placeholder="Your birth date" min="1930-01-01" max="2024-01-31">
-                <label for="suit-color">Preferred Spacesuit Color</label>
+                <label for="suit-color" class="top-label">Preferred Spacesuit Color</label>
                 <input type="color" id="suit-color">
             </div>
             <div>
                 <h3>Travel Preferences</h3>
                 <div class="inputsection">
-                    <label>Desired Planets to Visit</label><br>
+                    <label class="top-label">Desired Planets to Visit</label><br>
                     <div class="checkradio-item"><input type="checkbox" id="Mercury" name="Mercury" value="Mercury"><label for="Mercury">Mercury</label></div>
                     <div class="checkradio-item"><input type="checkbox" id="Venus" name="Venus" value="Venus"><label for="Venus">Venus</label></div>
                     <div class="checkradio-item"><input type="checkbox" id="Mars" name="Mars" value="Mars"><label for="Mars">Mars</label></div>
@@ -42,7 +41,7 @@
                     <div class="checkradio-item"><input type="checkbox" id="Neptune" name="Neptune" value="Neptune"><label for="Neptune">Neptune</label></div>
                 </div>
                 <div class="inputsection">
-                    <label>Desired Galaxies to Visit</label><br>
+                    <label class="top-label">Desired Galaxies to Visit</label><br>
                     <div class="checkradio-item"><input type="checkbox" id="Milky-Way" name="Milky Way" value="Milky Way"><label for="Milky-Way">Milky Way</label></div>
                     <div class="checkradio-item"><input type="checkbox" id="Andromeda" name="Andromeda" value="Andromeda"><label for="Andromeda">Andromeda</label></div>
                     <div class="checkradio-item"><input type="checkbox" id="Messier" name="Messier" value="Messier"><label for="Messier">Messier</label></div>
@@ -51,13 +50,13 @@
                     <div class="checkradio-item"><input type="checkbox" id="Sombrero" name="Sombrero" value="Sombrero"><label for="Sombrero">Sombrero</label></div>
                 </div>
                 <div class="inputsection">
-                    <label>Cabin Class</label><br>
+                    <label class="top-label">Cabin Class</label><br>
                     <div class="checkradio-item"><input type="radio" id="Economy" name="cabin-class" value="Economy"><label for="Economy">Economy</label></div>
                     <div class="checkradio-item"><input type="radio" id="Business" name="cabin-class" value="Business"><label for="Business">Business</label></div>
                     <div class="checkradio-item"><input type="radio" id="Galactic-Suite" name="cabin-class" value="Galactic Suite"><label for="Galactic-Suite">Galactic Suite</label></div>
                 </div>
                 <div class="inputsection">
-                    <label for="gravity">Gravity Level</label><br>
+                    <label for="gravity" class="top-label">Gravity Level</label><br>
                     <input type="range" id="gravity" name="gravity" min="0" max="10" value="4" list="markers">
                     <datalist id="markers">
                         <option value="0"></option>
@@ -69,7 +68,7 @@
                       </datalist>
                 </div>
                 <div class="inputsection">
-                    <label for="meal">Meal Preference</label><br>
+                    <label for="meal" class="top-label">Meal Preference</label><br>
                     <select id="meal" class="menu">
                         <option value="Earth Cuisine">Earth Cuisine</option>
                         <option value="Martian Delights">Martian Delights</option>
@@ -80,46 +79,57 @@
             <div>
                 <h3>Intergalactic Passport Upload</h3>
                 <div class="inputsection">
-                    <label for="passport">Upload a passport or intergalactic ID</label><br>
-                    <input type="file" id="passport" accept="image/*,application/pdf">
+                    <label for="passport-upload" class="passport-upload">Upload a passport or intergalactic ID</label><br>
+                    <input id="passport-upload" type="file" accept="image/*,application/pdf">
                 </div>
             </div>
             <div>
                 <h3>Health and Safety</h3>
                 <div class="inputsection">
-                    <label>Any known space allergies</label><br>
+                    <label class="top-label">Any known space allergies</label><br>
                     <div class="checkradio-item"><input type="checkbox" id="Moon-Dust" name="Moon Dust" value="Moon Dust"><label for="Moon-Dust">Moon Dust</label></div>
                     <div class="checkradio-item"><input type="checkbox" id="Solar-Flares" name="Solar Flares" value="Solar Flares"><label for="Solar-Flares">Solar Flares</label></div>
                 </div>
                 <div class="inputsection">
-                    <label for="medical-req">Any special medical requirements</label>
+                    <label for="medical-req" class="top-label">Any special medical requirements</label>
                     <textarea id="medical-req" rows="5"></textarea>
                 </div>
             </div>
             <div>
                 <h3>Legal Agreements and Consents</h3>
                 <div class="inputsection">
-                    <label>Please agree following items</label><br>
-                    <div class="checkradio-item"><input type="checkbox" id="Risk-Consent" name="Risk Consent" value="Risk Consent"><label for="Risk-Consent">Risk Consent</label></div>
-                    <div class="checkradio-item"><input type="checkbox" id="Space-Sickness-Waiver" name="Space Sickness Waiver" value="Space Sickness Waiver"><label for="Space-Sickness-Waiver">Space Sickness Waiver</label></div>
+                    <label class="top-label">Please agree following items</label><br>
+                    <div class="checkradio-item">
+                        <input type="checkbox" id="Risk-Consent" name="Risk Consent" value="Risk Consent">
+                        <label for="Risk-Consent">Risk Consent
+                            <a target="_blank" href="https://codersdash.com/why-becoming-a-full-stack-web-developer-is-a-smart-career-move-in-2023/">Read</a>
+                        </label>
+                    </div>
+                    <div class="checkradio-item">
+                        <input type="checkbox" id="Space-Sickness-Waiver" name="Space Sickness Waiver" value="Space Sickness Waiver">
+                        <label for="Space-Sickness-Waiver">Space Sickness Waiver
+                            <a target="_blank" href="https://codersdash.com/googles-gemini-pro-vs-openais-chatgpt-gpt-4/">Read</a>
+                        </label>
+                    </div>
                 </div>
                 <div class="inputsection">
-                    <label for="signature-pad">Signature</label><br>
+                    <label for="signature-pad" class="top-label">Signature</label><br>
                     <canvas id="signature-pad">Your browser doesn't support canvas</canvas>
                 </div>
             </div>
             <div>
                 <h3>Additional Requests and Comments</h3>
                 <div class="inputsection">
-                    <label for="extra-req">Any extra requirements or fun space travel wishes</label>
+                    <label for="extra-req" class="top-label">Any extra requirements or fun space travel wishes</label>
                     <textarea id="extra-req" rows="5"></textarea>
                 </div>
             </div>
             <div>
-                <input type="reset" value="Reset Form">
-                <input type="submit" value="Submit Values">
+                <input type="reset" class="btn-neutral" value="Reset Form">
+                <input type="submit" class="btn" value="Submit Values">
             </div>
         </form>
     </div>
+    <script src="js/script.js"></script>
 </body>
 </html>
